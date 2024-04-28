@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"> <img src="img/full-size-logo.png" alt="company logo"></a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pay.html">Pay Calculator</a>
+            <a href="vacancy.html" class="active">Vacancy Search</a>
+        </nav>
+    </header>
+    <main>
+        <!-- simple keyword search to display relevant vacancies -->
+        <div id="search-content">
+            <h1 id="search-title">Vacancy Search</h1>
+
+            <p id="search-description">You will be presented with 10 most recent vacancies<br>Good luck with the job hunt!<p>
+
+            <label for="searchInput">Input the vacancy</label>
+            <input type="text" id="searchInput" placeholder="Enter keyword">
+            <button id="search-btn" onclick="searchVacancies()">Search</button>
+        </div>
+        <div id="results">
+            <!-- results displayed here as a group -->
+        </div>
+    </main>
+    <footer>
+        <hr>
+        © Copyright Career Climb <b>Telephone:</b> +44 (0)141 123 456.
+        <a href="mailto:adam@careerclimb.co.uk"><b>Email: </b>adam@careerclimb.co.uk</a>
+    </footer>
+    <script src="vacancyScript.js"></script>
+</body>
+</html>

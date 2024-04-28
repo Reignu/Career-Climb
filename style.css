@@ -1,0 +1,253 @@
+/* Vacancy search */
+search-title {
+    text-align: center;
+    font-size: 2em;
+}
+
+#search-content {
+    font-size: 2em;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#search-btn {
+    font-size: 1em;
+    padding: 10px;
+    margin-left: 0; /* align button to the left */
+    border-radius: 5px; /* rounded corners */
+}
+
+#search-description {
+    text-align: left;
+    font-style: italic;
+    font-weight: 100; /* lower weight to divert attention to search form, optional advice */
+}
+
+.result{
+    font-weight: bold;
+}
+
+.vacancy {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative; /* used to place collapse-btn in the top right of vacancy */
+}
+
+#title {
+    margin-top: 0;
+}
+
+#company {
+    color: #54209C;
+    display: block; /* company details displayed in its own line for clarity */
+    text-align: left;
+}
+
+#collapse-btn {
+    position: absolute; /* sticks to top right of vacancy div to expand and collapse details */
+    top: 0;
+    right: 0;
+}
+
+.details > p {
+    color: black;
+    text-align: left;
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 768px) {
+    .vacancy {
+        font-size: 1em; /* Smaller font size for mobile */
+    }
+    #collapse-btn {
+            position: static; /* Reset button position for mobile screen */
+            order: -1; /* Move button to the bottom when stacking vertically */
+    }
+}
+
+/* pay calculator */
+
+legend {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+form {
+    font-size: 2em;
+    color: white;
+}
+
+p.description {
+    text-align: left;
+    font-weight: lighter;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+label {
+    display: block;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#calculate {
+    font-size: 1em;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#calc-div {
+    background-color: white;
+    padding: 20px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#job-header {
+    margin-right: 10px;
+}
+
+#view-jobs {
+    color: black;
+    display: inline-block;
+    margin-right: 0;
+    position: sticky;
+    border-radius: 10px;
+}
+
+/* global */
+
+h1, p {
+    color: white;
+    text-align: center;
+}
+
+button {
+    background-color: #7FA4CF;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    color: black;
+    border-radius: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #856DA6;
+    color: #54209C;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #7FA4CF;
+    color: black;
+}
+
+nav a {
+    color: #856DA6;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #CDDDFE;
+    color: #856DA6;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Move items to the edges */
+    align-items: center; /* Vertically center items */
+    background-color: #CDDDFE;
+    padding: 0;
+    color: white;
+}
+
+.logo {
+    margin-right: auto; /* Push logo to the left */
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    display: flex;
+}
+
+/* home page */
+
+#calculator, #job, #vacancy-search {
+    width: 300px;
+    height: auto; /* maintains aspect ratio */
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: row; /* horizontal orientation */
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+    .content {
+        flex-wrap: wrap; /* allows divs to wrap to the next line */
+    }
+
+}
+
+.box {
+    flex: 1; /* equal width for all divs */
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.main-content-header, .pay-content-header, .search-content-header {
+    color: #54209C;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}

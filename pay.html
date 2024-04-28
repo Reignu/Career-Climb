@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="index.html"> <img src="img/full-size-logo.png" alt="company logo"></a>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pay.html" class="active">Pay Calculator</a>
+        <a href="vacancy.html">Vacancy Search</a>
+    </nav>
+</header>
+<main>
+    <!-- form to enter data to calculate salary -->
+    <form id="salaryForm" class="container">
+        <fieldset>
+            <legend>Pay calculator</legend>
+            <p id="search-description">Enter information about the salary and we will calculate it for you<br>You can enter the information multiple times to compare values between different jobs<br>We are here to empower you to make an informed decision about your career</p>
+            <label for="job">Job Title</label>
+            <input type="text" id="job" name="job" placeholder="e.g. Developer" size="50"><br><br>
+            <!-- pay timeframe relating to pay used for calculation -->
+            <label for="timeframe">Pay timeframe</label>
+            <input list="timeframes" id="timeframe" name="timeframe" pattern="Hourly|Weekly|Monthly|Annual" title='Must be "Hourly", "Weekly", "Monthly" or "Annual"' placeholder="choose from dropdown" size="50"><br><br>
+                <datalist id="timeframes">
+                    <option value="hourly">Hourly</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="annual">Annual</option>
+                </datalist>
+            <label for="pay">Pay in GBP*</label>
+            <input type="text" id="pay" name="pay" placeholder="e.g. per hour if timeframe is hourly" size="50"><br><br>
+            <label for="weekHrs">Hours per week</label>
+            <input type="text" id="weekHrs" name="weekHrs" placeholder="e.g. 35" size="50"><br><br>
+        </fieldset>
+        <button type="button" id="calculate" onclick="calculateSalary()">Calculate</button>
+    </form>
+    <div id="result" style="display: none;">
+        <!-- Results will be displayed here -->
+    </div>
+</main>
+<footer>
+    <hr>
+    © Copyright Career Climb <b>Telephone:</b> +44 (0)141 123 456.
+    <a href="mailto:adam@careerclimb.co.uk"><b>Email: </b>adam@careerclimb.co.uk</a>
+</footer>
+<script src="payScript.js"></script>
+</body>
+</html>
