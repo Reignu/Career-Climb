@@ -1,0 +1,1 @@
+New directory to store webpage assets
